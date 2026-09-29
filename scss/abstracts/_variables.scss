@@ -1,0 +1,28 @@
+// Variables de diseño (tokens) de SmartBudget
+$color-ink: #14213d;        // texto y fondos oscuros
+$color-ink-soft: #46546f;   // texto secundario
+$color-paper: #f5f8fa;      // fondo de página
+$color-white: #ffffff;
+$color-line: #dce3ea;
+$color-mint: #1a8f62;       // acción principal / dentro del presupuesto
+$color-mint-dark: #13704c;
+$color-mint-light: #ddf3ea;
+$color-gold: #f2b33d;
+$color-coral: #d9482b;      // presupuesto casi agotado
+
+$font-heading: 'Sora', 'Segoe UI', sans-serif;
+$font-body: 'Public Sans', 'Segoe UI', sans-serif;
+
+$radius: 12px;
+$space: 8px;
+
+// Puntos de quiebre alineados con Bootstrap 4
+$breakpoints: (sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+
+// Categorías del medidor de presupuesto (se recorre con @each)
+$categories: (
+  housing: $color-coral,
+  food: $color-gold,
+  transport: $color-mint,
+  leisure: $color-ink-soft
+);

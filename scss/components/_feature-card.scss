@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+// Bloque BEM: feature-card (se combina con .card de Bootstrap)
+.feature-card {
+  height: 100%;
+  border: 1px solid $color-line;
+  border-radius: $radius;
+
+  &__icon { @include flex-center; width: 48px; height: 48px; margin-bottom: $space * 2;
+    background: $color-mint-light; border-radius: 50%; font-size: 1.4rem; }
+  &__title { font-size: 1.2rem; }
+  &__text { margin: 0; color: $color-ink-soft; }
+}

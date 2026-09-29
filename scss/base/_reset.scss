@@ -1,0 +1,9 @@
+// Modelo de cajas: el padding y el borde se incluyen en el ancho declarado
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+img { max-width: 100%; height: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

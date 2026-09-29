@@ -1,0 +1,3 @@
+// Ajustes mínimos sobre Bootstrap 4 (cargado por CDN antes de main.css).
+// Solo se corrige lo imprescindible; el resto se resuelve con clases propias (BEM).
+.modal-backdrop.show { opacity: .7; }

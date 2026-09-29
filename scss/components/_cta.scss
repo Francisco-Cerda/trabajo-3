@@ -1,0 +1,18 @@
+@use '../abstracts' as *;
+
+// Bloque BEM: cta (botón de llamada a la acción; extiende .btn de Bootstrap)
+.cta {
+  padding: $space * 1.5 $space * 3;
+  font-weight: 600;
+  border-radius: $radius;
+  @include focus-ring;
+
+  &--primary { background: $color-mint; color: $color-white; border: 2px solid $color-mint;
+    &:hover { background: $color-mint-dark; border-color: $color-mint-dark; color: $color-white; } }
+
+  &--ghost { background: transparent; color: $color-ink; border: 2px solid $color-ink;
+    &:hover { background: $color-ink; color: $color-white; } }
+
+  &--light { background: $color-gold; color: $color-ink; border: 2px solid $color-gold;
+    &:hover { background: $color-white; border-color: $color-white; } }
+}

@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+// Bloque BEM: section (espaciado vertical común)
+.section {
+  padding: $space * 8 0;
+  &--white { background: $color-white; }
+  &--dark { background: $color-ink; color: $color-white; }
+  &__title { margin: 0 0 $space * 5; font-size: 1.9rem; }
+  @include up(lg) { padding: $space * 12 0; }
+}

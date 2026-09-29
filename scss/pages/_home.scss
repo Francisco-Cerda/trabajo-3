@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+// Página: landing. Hero con CSS Grid (1 columna en móvil, 2 desde lg)
+.hero {
+  display: grid;
+  gap: $space * 6;
+  align-items: center;
+  @include up(lg) { grid-template-columns: 1.1fr .9fr; }
+
+  &__title { margin: 0 0 $space * 3; font-size: clamp(2rem, 5vw, 3.4rem); }
+  &__lead { margin: 0 0 $space * 4; font-size: 1.15rem; color: $color-ink-soft; }
+  &__actions { display: flex; flex-wrap: wrap; gap: $space * 2; }
+}
+
+.final-cta { text-align: center;
+  &__text { margin: 0 auto $space * 4; color: rgba($color-white, .8); } }

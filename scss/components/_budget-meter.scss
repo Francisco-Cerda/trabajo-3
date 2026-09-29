@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+// Bloque BEM: budget-meter (resumen visual del presupuesto mensual)
+.budget-meter {
+  padding: $space * 3;
+  background: $color-white;
+  border: 1px solid $color-line;
+  border-radius: $radius * 1.5;
+
+  &__title { margin: 0 0 $space * 2; font-size: 1.1rem; }
+  &__row { margin-bottom: $space * 2; }
+  &__label { display: flex; justify-content: space-between; font-size: .9rem; margin-bottom: $space * .5; }
+  &__amount { color: $color-ink-soft; }
+  &__track { height: 10px; background: $color-line; border-radius: 99px; overflow: hidden; }
+  &__bar { height: 100%; width: var(--fill); border-radius: 99px; }
+
+  // Genera un modificador de color por categoría
+  @each $name, $color in $categories {
+    &__bar--#{$name} { background: $color; }
+  }
+}

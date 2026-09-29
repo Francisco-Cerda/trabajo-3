@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmartBudget — Tus finanzas personales, claras</title>
+  <meta name="description" content="SmartBudget ordena tus gastos por categoría y te avisa antes de pasarte del presupuesto.">
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 4 (CDN) primero, estilos propios después -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- COMPONENTE: site-header (navegación principal, menú colapsable de Bootstrap) -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md navbar-light container" aria-label="Principal">
+      <a class="navbar-brand site-header__brand" href="#inicio">SmartBudget<span class="site-header__brand-dot">.</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ml-auto align-items-md-center">
+          <li class="nav-item"><a class="nav-link site-header__link" href="#funciones">Funciones</a></li>
+          <li class="nav-item"><a class="nav-link site-header__link" href="#como-funciona">Cómo funciona</a></li>
+          <li class="nav-item ml-md-3"><button class="btn cta cta--primary" data-toggle="modal" data-target="#registro">Crear cuenta</button></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="inicio">
+
+    <!-- SECCIÓN: hero (propuesta de valor + vista previa del producto) -->
+    <section class="section" aria-labelledby="hero-title">
+      <div class="container hero">
+        <div>
+          <h1 class="hero__title" id="hero-title">Sabe a dónde va cada peso antes de que termine el mes.</h1>
+          <p class="hero__lead">SmartBudget ordena tus gastos por categoría y te avisa cuando un presupuesto está por agotarse.</p>
+          <div class="hero__actions">
+            <button class="btn cta cta--primary" data-toggle="modal" data-target="#registro">Crear cuenta gratis</button>
+            <a class="btn cta cta--ghost" href="#como-funciona">Ver cómo funciona</a>
+          </div>
+        </div>
+
+        <!-- COMPONENTE: budget-meter (resumen del presupuesto mensual) -->
+        <aside class="budget-meter" aria-label="Ejemplo de presupuesto mensual">
+          <h2 class="budget-meter__title">Presupuesto de septiembre</h2>
+          <div class="budget-meter__row">
+            <div class="budget-meter__label"><span>Vivienda</span><span class="budget-meter__amount">$420.000 de $450.000</span></div>
+            <div class="budget-meter__track" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100" aria-label="Vivienda"><div class="budget-meter__bar budget-meter__bar--housing" style="--fill:93%"></div></div>
+          </div>
+          <div class="budget-meter__row">
+            <div class="budget-meter__label"><span>Comida</span><span class="budget-meter__amount">$192.000 de $300.000</span></div>
+            <div class="budget-meter__track" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" aria-label="Comida"><div class="budget-meter__bar budget-meter__bar--food" style="--fill:64%"></div></div>
+          </div>
+          <div class="budget-meter__row">
+            <div class="budget-meter__label"><span>Transporte</span><span class="budget-meter__amount">$38.000 de $100.000</span></div>
+            <div class="budget-meter__track" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100" aria-label="Transporte"><div class="budget-meter__bar budget-meter__bar--transport" style="--fill:38%"></div></div>
+          </div>
+          <div class="budget-meter__row mb-0">
+            <div class="budget-meter__label"><span>Ocio</span><span class="budget-meter__amount">$81.000 de $100.000</span></div>
+            <div class="budget-meter__track" role="progressbar" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100" aria-label="Ocio"><div class="budget-meter__bar budget-meter__bar--leisure" style="--fill:81%"></div></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: funciones (cards de Bootstrap dentro de la grilla de Bootstrap) -->
+    <section class="section section--white" id="funciones" aria-labelledby="funciones-title">
+      <div class="container">
+        <h2 class="section__title" id="funciones-title">Lo que puedes hacer con SmartBudget</h2>
+        <div class="row">
+          <article class="col-md-4 mb-4">
+            <div class="card feature-card"><div class="card-body">
+              <div class="feature-card__icon" aria-hidden="true">🗂️</div>
+              <h3 class="feature-card__title">Clasifica tus gastos</h3>
+              <p class="feature-card__text">Cada movimiento queda en su categoría. Puedes cambiarla con un clic.</p>
+            </div></div>
+          </article>
+          <article class="col-md-4 mb-4">
+            <div class="card feature-card"><div class="card-body">
+              <div class="feature-card__icon" aria-hidden="true">🔔</div>
+              <h3 class="feature-card__title">Recibe alertas a tiempo</h3>
+              <p class="feature-card__text">Te avisamos cuando llegas al 80 % de un límite, no cuando ya lo superaste.</p>
+            </div></div>
+          </article>
+          <article class="col-md-4 mb-4">
+            <div class="card feature-card"><div class="card-body">
+              <div class="feature-card__icon" aria-hidden="true">🎯</div>
+              <h3 class="feature-card__title">Cumple tus metas de ahorro</h3>
+              <p class="feature-card__text">Define cuánto quieres juntar y sigue el avance mes a mes.</p>
+            </div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: cómo funciona (lista ordenada: es una secuencia real) -->
+    <section class="section" id="como-funciona" aria-labelledby="pasos-title">
+      <div class="container">
+        <h2 class="section__title" id="pasos-title">Empieza en tres pasos</h2>
+        <ol class="steps">
+          <li class="steps__item"><h3 class="steps__title">Registra tus gastos</h3><p class="steps__text">Anótalos a mano o importa el archivo de tu banco.</p></li>
+          <li class="steps__item"><h3 class="steps__title">Fija un límite por categoría</h3><p class="steps__text">Elige cuánto quieres gastar en cada una.</p></li>
+          <li class="steps__item"><h3 class="steps__title">Revisa tu mes</h3><p class="steps__text">Mira qué categorías se pasaron y ajusta el siguiente presupuesto.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: llamada final a la acción -->
+    <section class="section section--dark final-cta" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 class="section__title" id="cta-title">Ordena tu primer presupuesto hoy</h2>
+        <p class="final-cta__text">Crear la cuenta toma menos de un minuto.</p>
+        <button class="btn cta cta--light" data-toggle="modal" data-target="#registro">Crear cuenta gratis</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- COMPONENTE: site-footer -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="mb-0">© 2026 SmartBudget</p>
+      <ul class="site-footer__list">
+        <li><a class="site-footer__link" href="#funciones">Funciones</a></li>
+        <li><a class="site-footer__link" href="#como-funciona">Cómo funciona</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- COMPONENTE: signup-modal (modal de Bootstrap) -->
+  <div class="modal fade signup-modal" id="registro" tabindex="-1" role="dialog" aria-labelledby="registro-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content signup-modal__content">
+        <div class="modal-header border-0">
+          <h2 class="modal-title signup-modal__title" id="registro-title">Crea tu cuenta</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group"><label for="nombre">Nombre</label><input type="text" class="form-control" id="nombre" autocomplete="name"></div>
+          <div class="form-group"><label for="correo">Correo electrónico</label><input type="email" class="form-control" id="correo" autocomplete="email"></div>
+          <p class="signup-modal__note mb-0">Es una maqueta: el formulario aún no envía datos.</p>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn cta cta--ghost" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn cta cta--primary" data-dismiss="modal">Crear cuenta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

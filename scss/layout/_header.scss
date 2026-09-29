@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+// Bloque BEM: site-header (position: sticky + navbar de Bootstrap)
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba($color-paper, .95);
+  border-bottom: 1px solid $color-line;
+
+  &__brand { font: 700 1.3rem $font-heading; color: $color-ink; }
+  &__brand-dot { color: $color-mint; }
+  &__link { color: $color-ink-soft; @include focus-ring; }
+}

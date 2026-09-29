@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+body {
+  margin: 0;
+  font-family: $font-body;
+  color: $color-ink;
+  background: $color-paper;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: $font-heading;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+p { max-width: 62ch; } // líneas legibles (< 80 caracteres)

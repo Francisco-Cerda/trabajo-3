@@ -1,0 +1,5 @@
+@use '../abstracts' as *;
+
+// Tema por defecto: selección de texto y enlaces globales
+::selection { background: $color-mint-light; color: $color-ink; }
+a { color: $color-mint-dark; }
